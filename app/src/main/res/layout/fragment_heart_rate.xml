@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:tag="fragment_heart_rate"
+    tools:context="ch.epfl.fmottier.studenthealthmonitoring.HeartRateFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineVerticalHeartRate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <!--
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineHorizontalHeartRate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".4" />
+        -->
+
+        <TextView
+            android:id="@+id/lblHeartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_heart_rate"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnHeartRateStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:text="START"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRate" />
+
+        <Chronometer
+            android:id="@+id/chronoHeartRateChronometer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/black"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btnHeartRateStart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnHeartRateStart"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRate" />
+
+        <TextView
+            android:id="@+id/lblHeartRateInstruction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/instruction_1"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHeartRateStart" />
+
+        <ImageView
+            android:id="@+id/imageViewHeartRate"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:gravity="center"
+            android:src="@drawable/rest"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lblHeartRateFixDate"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRateInstruction" />
+        <!-- app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalHeartRate" -->
+
+        <TextView
+            android:id="@+id/lblHeartRateData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="bpm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHeartRate" />
+
+        <TextView
+            android:id="@+id/lblHeartRateFixDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/darker_gray"
+            android:text="@string/date"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="@+id/lineChartHearRate"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRateData" />
+
+        <TextView
+            android:id="@+id/lblHeartRateDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDate"
+            app:layout_constraintEnd_toStartOf="@+id/lblHeartRateFixName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblHeartRateFixDate"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDate" />
+
+        <TextView
+            android:id="@+id/lblHeartRateFixName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="@string/name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDate" />
+
+        <TextView
+            android:id="@+id/lblHeartRateName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDate"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonHeartRateEdit"
+            app:layout_constraintStart_toEndOf="@+id/lblHeartRateFixName"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDate" />
+
+        <ImageButton
+            android:id="@+id/imageButtonHeartRateEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:src="@android:drawable/ic_menu_preferences"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDate"
+            app:layout_constraintEnd_toStartOf="@+id/lblHeartRateFixEdit"
+            app:layout_constraintStart_toEndOf="@+id/lblHeartRateName"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDate" />
+
+        <TextView
+            android:id="@+id/lblHeartRateFixEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="@string/space"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonHeartRateEdit"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDate" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChartHearRate"
+            android:layout_width="0dp"
+            android:layout_height="215dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRateFixName"/>
+
+        <TextView
+            android:id="@+id/lblHeartRateFixRest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/darker_gray"
+            android:text="@string/hr_rest"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineChartHearRate" />
+
+        <TextView
+            android:id="@+id/lblHeartRateRest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixRest"
+            app:layout_constraintEnd_toStartOf="@+id/lblHeartRateFixStand"
+            app:layout_constraintStart_toEndOf="@+id/lblHeartRateFixRest"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixRest" />
+
+        <TextView
+            android:id="@+id/lblHeartRateFixStand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/darker_gray"
+            android:text="@string/hr_stand"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixRest"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVerticalHeartRate"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixRest" />
+
+        <TextView
+            android:id="@+id/lblHeartRateStand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixRest"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblHeartRateFixStand"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixRest" />
+
+        <TextView
+            android:id="@+id/lblHeartRateFixDiff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/darker_gray"
+            android:text="@string/hr_diff"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRateFixRest" />
+
+        <TextView
+            android:id="@+id/lblHeartRateDiff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDiff"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalHeartRate"
+            app:layout_constraintStart_toEndOf="@+id/lblHeartRateFixDiff"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDiff" />
+
+        <TextView
+            android:id="@+id/lblHeartRateFixMax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/darker_gray"
+            android:text="@string/hr_max"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDiff"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVerticalHeartRate"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDiff"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/lblHeartRateMax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblHeartRateFixDiff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblHeartRateFixMax"
+            app:layout_constraintTop_toTopOf="@+id/lblHeartRateFixDiff" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

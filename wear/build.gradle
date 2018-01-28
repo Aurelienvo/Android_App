@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "ch.epfl.fmottier.studenthealthmonitoring"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildTypes.each {
+                project.ext.constants.each {
+                        // Create module constants as both String constants and string resources
+                        //    String constants used in Java as BuildConfig.k ("k" being the key used)
+                        //    Resources are used as usual:
+                        //         in Java as [getApplicationContext().]getString(R.string.a_key)
+                        //         in XML as @string/app_name
+                    k, v ->
+                        it.buildConfigField 'String', k, "\"${v}\""
+                        it.resValue 'string', k, v
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:wear:26.1.0'
+    compile 'com.google.android.gms:play-services-wearable:11.6.2'
+    compile 'com.android.support:support-v13:26.1.0'
+    compile 'com.google.android.support:wearable:2.1.0'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compileOnly 'com.google.android.wearable:wearable:2.1.0'
+    provided 'com.google.android.wearable:wearable:2.1.0'
+
+    compile 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+
+    implementation 'com.androidplot:androidplot-core:1.5.1'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.google.android.gms:play-services-location:11.6.2'
+}
+
+apply plugin: 'com.google.gms.google-services'

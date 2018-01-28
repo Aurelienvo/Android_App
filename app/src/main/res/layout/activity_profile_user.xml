@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ch.epfl.fmottier.studenthealthmonitoring.ProfileUserActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <include
+            android:id="@+id/toolbarProfileUser"
+            layout="@layout/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewProfileUser"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbarProfileUser"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/default_profil" />
+
+        <TextView
+            android:id="@+id/lblProfileUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewProfileUser"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/display_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/lblProfileUserStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblProfileUserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/hi_there_i_m_new_here"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutProfileUserFriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblProfileUserStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/lblProfileUserFriendsFix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/total_friends"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/lblProfileUserFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnProfileUserAddFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="@string/friend_this_person_cap"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+</ScrollView>

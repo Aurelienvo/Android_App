@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="0dp">
+
+
+    <ImageButton
+        android:id="@+id/btnStartFit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="32dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/fit_icone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnStartGps"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="32dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gps_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="66dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/health_monitoring_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_small"
+        android:text="@string/descripton_fit"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartFit"
+        app:layout_constraintEnd_toEndOf="@+id/btnStartFit"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnStartFit" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/colorAccent"
+        android:text="@string/descripton_outside"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartGps"
+        app:layout_constraintEnd_toEndOf="@+id/btnStartGps"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnStartGps" />
+
+</android.support.constraint.ConstraintLayout>

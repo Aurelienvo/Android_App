@@ -1,0 +1,58 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\ASUS\\Desktop\\EPFL\\Semestre1\\Lab_Developement_Application\\HRDisplay_Stock\\StudentHealthMonitoring_final\\wear\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0676f977b9a34d91437c47e4ebb76826\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\bf6452da59e60629ef3a4a1b07446989\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,517",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "512,671"
+                    },
+                    "to": {
+                        "startLines": "58,66",
+                        "startColumns": "4,4",
+                        "startOffsets": "3634,4096",
+                        "endLines": "65,68",
+                        "endColumns": "12,12",
+                        "endOffsets": "4091,4250"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\92b1df21790c9e3c315d722c46ed227b\\res\\values-v23\\values.xml",
+                    "from": {
+                        "startLines": "4,8,12,20,23",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "211,373,537,938,1079",
+                        "endLines": "7,11,19,22,24",
+                        "endColumns": "8,8,8,8,8",
+                        "endOffsets": "372,536,937,1078,1178"
+                    },
+                    "to": {
+                        "startLines": "37,41,45,53,56",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "2646,2812,2980,3385,3530",
+                        "endLines": "40,44,52,55,57",
+                        "endColumns": "8,8,8,8,8",
+                        "endOffsets": "2807,2975,3380,3525,3629"
+                    }
+                }
+            ]
+        }
+    ]
+}

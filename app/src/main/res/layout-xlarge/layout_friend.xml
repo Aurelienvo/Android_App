@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineVerticalFriend"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineHorizontalFriend"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <ImageView
+        android:id="@+id/imageViewFriendImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblFriendName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageViewFriendImage"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/imageViewFriendImage"
+        android:text="@string/display_name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFriendImage"
+        app:layout_constraintTop_toTopOf="@+id/imageViewFriendImage" />
+
+    <TextView
+        android:id="@+id/lblFriendFixSinceDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblFriendName"
+        android:layout_below="@+id/lblFriendName"
+        android:layout_marginStart="8dp"
+        android:text="@string/friends_since"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFriendImage"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFriendImage"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendName" />
+
+    <TextView
+        android:id="@+id/lblFriendSinceDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblFriendName"
+        android:layout_below="@+id/lblFriendName"
+        android:layout_marginEnd="8dp"
+        android:text="@string/default_date"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFriendImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendFixSinceDate"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendName" />
+
+    <TextView
+        android:id="@+id/lblFriendGPS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDarkGrey"
+        android:text="@string/gps_cap"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFriendImage" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/date"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPS" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixDate"
+        app:layout_constraintEnd_toStartOf="@+id/lblFriendGPSFixName"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixDate"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPS" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/name"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPS" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixName"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPS" />
+
+    <com.google.android.gms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mapFriendGPS"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPSFixName"
+        map:liteMode="true"
+        map:mapType="normal" />
+
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/start_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapFriendGPS" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSStartTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixStartTime"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixStartTime"
+        app:layout_constraintTop_toBottomOf="@+id/mapFriendGPS" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/end_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintBottom_toTopOf="@+id/lblFriendGPSFixTotalTime"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintTop_toBottomOf="@+id/mapFriendGPS" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSEndTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixEndTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixEndTime"
+        app:layout_constraintTop_toBottomOf="@+id/mapFriendGPS" />
+
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/total_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPSFixStartTime" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSTotalTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixTotalTime"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixTotalTime"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixTotalDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/total_distance"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixTotalTime"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSTotalDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixTotalTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixTotalDistance"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixAverageSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/ave_speed"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSAverageSpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixAverageSpeed"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixAverageSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSFixMaxSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/max_speed"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixAverageSpeed"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblFriendGPSMaxSpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendGPSFixAverageSpeed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendGPSFixMaxSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDarkGrey"
+        android:text="@string/heart_rate_cap"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendGPSFixAverageSpeed" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateFixDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/darker_gray"
+        android:text="@string/date"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendHeartRate" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/lblFriendHeartRateFixName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendHeartRateFixDate"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendHeartRate" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateFixName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/name"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendHeartRate" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendHeartRateFixName"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendHeartRate" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChartFriendHeartRate"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendHeartRateFixName"></com.github.mikephil.charting.charts.LineChart>
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateFixRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/darker_gray"
+        android:text="@string/hr_rest"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toBottomOf="@+id/lineChartFriendHeartRate" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateRest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendHeartRateFixRest"
+        app:layout_constraintEnd_toStartOf="@+id/lblFriendHeartRateFixStand"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendHeartRateFixRest"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendHeartRateFixRest" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateFixStand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/darker_gray"
+        android:text="@string/hr_stand"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendHeartRateFixRest"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendHeartRateFixRest" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateStand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendHeartRateFixRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendHeartRateFixStand"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendHeartRateFixRest" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateFixDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/darker_gray"
+        android:text="@string/hr_diff"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFriendHeartRateFixRest" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateDiff"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendHeartRateFixDiff"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendHeartRateFixDiff"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendHeartRateFixDiff" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateFixMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/darker_gray"
+        android:text="@string/hr_max"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendHeartRateFixDiff"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalFriend"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendHeartRateFixDiff"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblFriendHeartRateMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFriendHeartRateFixDiff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFriendHeartRateFixMax"
+        app:layout_constraintTop_toTopOf="@+id/lblFriendHeartRateFixDiff" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_gps"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="0dp">
+
+
+    <Button
+        android:id="@+id/butonStop"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/outside_act_stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/butonStart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butonStart"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/outside_act_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butonStop" />
+
+    <Button
+        android:id="@+id/butonPause"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/outside_act_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Chronometer
+        android:id="@+id/chronometer1"
+        android:layout_width="85dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/duration"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="@+id/chronometer1"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chronometer1"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer1" />
+
+    <TextView
+        android:id="@+id/heart_rate"
+        android:layout_width="53dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="75dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:text="BPM"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heart_rate" />
+
+    <TextView
+        android:id="@+id/altitude_value"
+        android:layout_width="53dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="75dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:text="ALTITUDE"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altitude_value" />
+
+
+</android.support.constraint.ConstraintLayout>
+

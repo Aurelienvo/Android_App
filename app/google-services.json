@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "737554445499",
+    "firebase_url": "https://studenthealthmonitoring.firebaseio.com",
+    "project_id": "studenthealthmonitoring",
+    "storage_bucket": "studenthealthmonitoring.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737554445499:android:1f6aaab551345eb6",
+        "android_client_info": {
+          "package_name": "ch.epfl.fmottier.studenthealthmonitoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737554445499-e7qjnnmkrroohp2f74vdojir0ijpi4io.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.fmottier.studenthealthmonitoring",
+            "certificate_hash": "d71611b2629855225b3ef79ed67b44d8cf140062"
+          }
+        },
+        {
+          "client_id": "737554445499-4440a3ccriooka7musu1dh3tvmv3ge8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeVA7WaYz-Zt2gPj3IlUvHPsT-TQCdIp8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737554445499-4440a3ccriooka7musu1dh3tvmv3ge8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

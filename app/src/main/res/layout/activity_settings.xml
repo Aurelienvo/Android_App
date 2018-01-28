@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ch.epfl.fmottier.studenthealthmonitoring.SettingsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <include
+            android:id="@+id/toolbarSettings"
+            layout="@layout/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageViewSettingsImage"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_below="@+id/toolbarSettings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/default_profil" />
+
+        <TextView
+            android:id="@+id/lblSettingsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circleImageViewSettingsImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/display_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/lblSettingsEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblSettingsName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/your_email"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/lblSettingsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblSettingsEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/hi_there_i_m_new_here"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSettingsPhysicalCharacteristics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblSettingsStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageViewSettingsGender"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/symbol_male" />
+
+            <TextView
+                android:id="@+id/lblSettingsBirthDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/imageViewSettingsGender"
+                android:text="@string/default_birthday"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/lblSettingsHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/lblSettingsBirthDate"
+                android:text="@string/default_height"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/lblSettingsWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/lblSettingsHeight"
+                android:text="@string/default_weight"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSettingsChangeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSettingsChangeName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="@string/change_image_cap"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+
+        <Button
+            android:id="@+id/btnSettingsChangeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSettingsChangeStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:text="@string/change_name_cap"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+
+        <Button
+            android:id="@+id/btnSettingsChangeStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSettingsChangePhysicalCharacteristics"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="@string/change_status_cap"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+
+        <Button
+            android:id="@+id/btnSettingsChangePhysicalCharacteristics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="@string/change_physical_characteristics_cap"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuSync"
+        android:title="Sync"
+        android:icon="@drawable/ic_action_sync"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuMenu"
+        android:title="Menu"
+        android:icon="@drawable/ic_action_menu"
+        app:showAsAction="always" >
+
+    <menu>
+
+        <item
+            android:id="@+id/menuitemMainAccountSettings"
+            android:title="@string/account_settings" />
+        <item
+            android:id="@+id/menuitemMainAllUsers"
+            android:title="@string/all_users" />
+        <item
+            android:id="@+id/menuitemMainLogOut"
+            android:title="@string/log_out" />
+    </menu>
+    </item>
+    </menu>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:screenOrientation="portrait"
+    tools:context="ch.epfl.fmottier.studenthealthmonitoring.StartActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/health_monitoring_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/welcome_to_chat_app"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_large" />
+
+    <Button
+        android:id="@+id/btnStartAlreadyAccount"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnStartNewAccount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="0dp"
+        android:text="@string/already_have_account_cap"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_small" />
+
+    <Button
+        android:id="@+id/btnStartNewAccount"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:backgroundTint="@android:color/white"
+        android:text="@string/need_a_new_account_cap"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_small" />
+
+
+</RelativeLayout>

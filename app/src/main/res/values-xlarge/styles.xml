@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Toolbar.Title" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:textSize">25sp</item> //size desired.
+    <item name="android:textColor">@android:color/white</item> //font color
+    </style>
+
+    <style name="Toolbar.PopUp" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textSize">25sp</item> //size desired.
+        <item name="android:textColor">@android:color/white</item> //font color
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <style name="TabLayout" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">20sp</item> //size desired.
+        <item name="android:textColor">@color/colorNoSelected</item> //font color
+    </style>
+</resources>

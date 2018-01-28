@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LayoutsEverywhere</string>
+    <string name="Introduction">Bienvenue dans Student Health Monitoring</string>
+    <string name="gps_welcome">Bienvenue dans GPS</string>
+    <string name="fit_welcome">Bienvenue dans FIT</string>
+    <string name="fit_act_done">Fin</string>
+    <string name="outside_act_stop">Arrêt</string>
+    <string name="outside_act_start">Lancer</string>
+    <string name="outside_act_pause">Pause</string>
+    <string name="duration">DURÉE</string>
+    <string name="choice">Voulez-vous envoyer l\'activité ?</string>
+    <string name="bpm">BPM</string>
+    <string name="elevation">ALTITUDE</string>
+    <string name="send_act_save">Sauver</string>
+    <string name="send_act_stop">Supprimer</string>
+    <string name="toast_send">Envoie...</string>
+    <string name="btn_stop">Arrêt</string>
+    <string name="descripton_fit">Test FQ</string>
+    <string name="descripton_outside">Activité GPS</string>
+    <string name="sdf_yyyyMMddTHHmmssZ">yyyy-MM-dd\'T\'HH:mm:ss\'Z\'</string>
+</resources>

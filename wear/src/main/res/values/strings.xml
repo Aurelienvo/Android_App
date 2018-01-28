@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Student Health Monitoring</string>
+    <string name="Introduction">Welcome to health Monitoring</string>
+    <string name="gps_welcome">Welcome to GPS</string>
+    <string name="fit_welcome">Welcome to FIT</string>
+    <string name="fit_act_done">Done</string>
+    <string name="outside_act_stop">Stop</string>
+    <string name="outside_act_start">Start</string>
+    <string name="outside_act_pause">Pause</string>
+    <string name="duration">DURATION</string>
+    <string name="choice">Do you want to send the activity?</string>
+    <string name="bpm">BPM</string>
+    <string name="elevation">ELEVATION</string>
+    <string name="send_act_save">Save</string>
+    <string name="send_act_stop">Delete</string>
+    <string name="toast_send">Sending...</string>
+    <string name="btn_stop">Stop</string>
+    <string name="descripton_fit">HR Test</string>
+    <string name="descripton_outside">GPS Activity</string>
+    <string name="sdf_yyyyMMddTHHmmssZ">yyyy-MM-dd\'T\'HH:mm:ss\'Z\'</string>
+</resources>

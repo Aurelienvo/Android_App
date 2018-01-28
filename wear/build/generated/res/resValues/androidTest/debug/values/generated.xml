@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Values from build type: debug -->
+    <string name="a_key" translatable="false">a_key</string>
+    <string name="a_location_key" translatable="false">a_location_key</string>
+    <string name="acknowledge" translatable="false">/ACKNOWLEDGE_PATH</string>
+    <string name="another_path" translatable="false">/ANOTHER_PATH</string>
+    <string name="heart_rate_key" translatable="false">heart_rate_key</string>
+    <string name="heart_rate_path" translatable="false">/HEART_RATE_PATH</string>
+    <string name="list_hr_key" translatable="false">list_hr_key</string>
+    <string name="list_hr_path" translatable="false">/LIST_HR_PATH</string>
+    <string name="location_key" translatable="false">location_key</string>
+    <string name="location_path" translatable="false">/LOCATION_PATH</string>
+    <string name="sensor_data_key" translatable="false">/SENSOR_DATA_KEY</string>
+    <string name="sensor_data_path" translatable="false">/SENSOR_DATA_PATH</string>
+    <string name="some_other_key" translatable="false">some_other_key</string>
+    <string name="some_path" translatable="false">/SOME_PATH</string>
+    <string name="start_activity" translatable="false">/START_ACTIVITY</string>
+
+</resources>

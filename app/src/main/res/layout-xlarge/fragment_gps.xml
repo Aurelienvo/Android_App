@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="ch.epfl.fmottier.studenthealthmonitoring.GPSFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineVerticalGPS"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <!--
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineHorizontalGPS"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".5" />
+        -->
+
+        <TextView
+            android:id="@+id/lblHeartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_gps"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/lblGPSFixDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="@string/date"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintStart_toStartOf="@+id/lineChartHearRate"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRate" />
+
+        <TextView
+            android:id="@+id/lblGPSDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixDate"
+            app:layout_constraintEnd_toStartOf="@+id/lblGPSFixName"
+            app:layout_constraintStart_toEndOf="@+id/lblGPSFixDate"
+            app:layout_constraintTop_toTopOf="@+id/lblGPSFixDate" />
+
+        <TextView
+            android:id="@+id/lblGPSFixName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="@string/name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixDate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblGPSFixDate" />
+
+        <TextView
+            android:id="@+id/lblGPSName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixDate"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonGPSEdit"
+            app:layout_constraintStart_toEndOf="@+id/lblGPSFixName"
+            app:layout_constraintTop_toTopOf="@+id/lblGPSFixDate" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGPSEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:src="@android:drawable/ic_menu_preferences"
+            app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixDate"
+            app:layout_constraintEnd_toStartOf="@+id/lblGPSFixEdit"
+            app:layout_constraintStart_toEndOf="@+id/lblGPSName"
+            app:layout_constraintTop_toBottomOf="@+id/lblHeartRate" />
+
+        <TextView
+            android:id="@+id/lblGPSFixEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="@string/space"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonGPSEdit"
+            app:layout_constraintTop_toTopOf="@+id/lblGPSFixDate" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblGPSFixDate" />
+        <!--app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalGPS"-->
+
+        <TextView
+            android:id="@+id/lblGPSFixStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="@string/start_time"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_xsmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <TextView
+        android:id="@+id/lblGPSStartTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixStartTime"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalGPS"
+        app:layout_constraintStart_toEndOf="@+id/lblGPSFixStartTime"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <TextView
+        android:id="@+id/lblGPSFixEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/end_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintBottom_toTopOf="@+id/lblGPSFixTotalTime"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalGPS"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <TextView
+        android:id="@+id/lblGPSEndTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixEndTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblGPSFixEndTime"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+
+    <TextView
+        android:id="@+id/lblGPSFixTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/total_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblGPSFixStartTime" />
+
+    <TextView
+        android:id="@+id/lblGPSTotalTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixTotalTime"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalGPS"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblGPSFixTotalTime"
+        app:layout_constraintTop_toTopOf="@+id/lblGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblGPSFixTotalDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/total_distance"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixTotalTime"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalGPS"
+        app:layout_constraintTop_toTopOf="@+id/lblGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblGPSTotalDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixTotalTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblGPSFixTotalDistance"
+        app:layout_constraintTop_toTopOf="@+id/lblGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblGPSFixAverageSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="@string/ave_speed"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblGPSAverageSpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixAverageSpeed"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalGPS"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblGPSFixAverageSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/lblGPSFixTotalTime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblGPSFixMaxSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        android:text="@string/max_speed"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixAverageSpeed"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalGPS"
+        app:layout_constraintTop_toBottomOf="@+id/lblGPSFixTotalTime" />
+
+    <TextView
+        android:id="@+id/lblGPSMaxSpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_xsmall"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/lblGPSFixAverageSpeed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblGPSFixMaxSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/lblGPSFixTotalTime" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChartGPSElevationProfile"
+            android:layout_width="0dp"
+            android:layout_height="310dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblGPSFixAverageSpeed" />
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
