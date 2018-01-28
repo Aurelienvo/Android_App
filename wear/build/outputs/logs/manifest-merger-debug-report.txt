@@ -195,7 +195,7 @@ MERGED from [com.google.firebase:firebase-iid-license:11.6.2] C:\Users\ASUS\.gra
 	android:label
 		ADDED from C:\Users\ASUS\Desktop\EPFL\Semestre1\Lab_Developement_Application\HRDisplay_Stock\StudentHealthMonitoring_final\wear\src\main\AndroidManifest.xml:18:9-41
 	android:icon
-		ADDED from C:\Users\ASUS\Desktop\EPFL\Semestre1\Lab_Developement_Application\HRDisplay_Stock\StudentHealthMonitoring_final\wear\src\main\AndroidManifest.xml:17:9-43
+		ADDED from C:\Users\ASUS\Desktop\EPFL\Semestre1\Lab_Developement_Application\HRDisplay_Stock\StudentHealthMonitoring_final\wear\src\main\AndroidManifest.xml:17:9-56
 	android:allowBackup
 		ADDED from C:\Users\ASUS\Desktop\EPFL\Semestre1\Lab_Developement_Application\HRDisplay_Stock\StudentHealthMonitoring_final\wear\src\main\AndroidManifest.xml:16:9-35
 	android:theme
